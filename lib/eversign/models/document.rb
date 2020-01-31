@@ -7,7 +7,7 @@ module Eversign
 		    				  :files, :signers, :recipients, :meta, :fields
 			
 		  def initialize(template_id=nil, sandbox=nil, embedded_signing_enabled=nil)
-        		self.template_id = name
+        		self.template_id = template_id
 			self.sandbox = sandbox
 			self.embedded_signing_enabled = embedded_signing_enabled
 		  end 			
