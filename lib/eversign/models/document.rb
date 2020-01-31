@@ -5,7 +5,14 @@ module Eversign
 		    				  :redirect, :redirect_decline, :client, :expires, :embedded_signing_enabled, :requester_email, :is_template,
 		    				  :is_completed, :is_archived, :is_deleted, :is_trashed, :is_cancelled, :embedded, :in_person, :permission,
 		    				  :files, :signers, :recipients, :meta, :fields
-
+                 
+		  def initialize(template_id=nil, sandbox=nil, embedded_signing_enabled=nil)
+        		self.template_id = name
+			self.sandbox = sandbox
+			self.embedded_signing_enabled = embedded_signing_enabled
+		  end 			  
+		  
+			
 		  def add_file(file)
 		  	self.files ||= []
 		  	self.files << file
