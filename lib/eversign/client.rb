@@ -136,12 +136,12 @@ module Eversign
 		end
 
 		def download_final_document_to_path(document_hash, path, audit_trail=1)
-			sub_uri = "/api/download_raw_document?access_key=#{access_key}&business_id=#{business_id}&document_hash=#{document_hash}&audit_trail=#{audit_trail}"
+			sub_uri = "/api/download_final_document?access_key=#{access_key}&business_id=#{business_id}&document_hash=#{document_hash}&audit_trail=#{audit_trail}"
 			download(sub_uri, path)
 		end
 		
 		def download_final_document(document_hash, audit_trail=1)
-			sub_uri = "/api/download_raw_document?access_key=#{access_key}&business_id=#{business_id}&document_hash=#{document_hash}&audit_trail=#{audit_trail}"
+			sub_uri = "/api/download_final_document?access_key=#{access_key}&business_id=#{business_id}&document_hash=#{document_hash}&audit_trail=#{audit_trail}"
 			response = execute_request(:get, sub_uri)
 			response.body
 		end	
